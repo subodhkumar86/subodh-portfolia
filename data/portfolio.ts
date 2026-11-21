@@ -1,5 +1,6 @@
 export type ProjectCategory =
   | "Enterprise & Gov"
+  | "Enterprise & SaaS"
   | "SaaS & AI"
   | "Microservices & DevOps"
   | "E-Commerce & EdTech";
@@ -146,18 +147,18 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
   {
     id: "fleetovo",
     title: "Fleetovo",
-    subtitle: "Commercial Car Rental Operations SaaS",
-    category: "SaaS & AI",
+    subtitle: "End-to-End Commercial Car Rental & Fleet Operations OS (ERP + CRM)",
+    category: "Enterprise & SaaS",
     badge: "Live SaaS",
     stack: ["React.js", "Node.js", "Express.js", "Razorpay Webhooks", "PostgreSQL/MySQL"],
     liveUrl: "https://fleetovo.com",
     description:
-      "12-step commercial car rental suite covering view-tracked public estimate links, Razorpay webhook auto-booking conversion, driver duty mobile portals (v1/client/bookings), dynamic UPI QR collections, and automated CGST/SGST/IGST PDF invoicing.",
+      "Architected a multi-tenant cloud Operations OS that unifies the entire lifecycle of commercial car rental and fleet businesses—connecting CRM lead pipelines, dynamic rate cards, live duty dispatch, fleet maintenance, risk compliance, and automated GST accounting into a single platform with granular Role-Based Access Control (RBAC).",
     highlights: [
-      "View-tracked public estimate links with conversion analytics",
-      "Razorpay webhook-driven auto-booking conversion on payment success",
-      "Driver duty mobile portal with dynamic UPI QR collection flows",
-      "Automated CGST / SGST / IGST PDF invoicing engine",
+      "7-Module Operations Architecture: Unified Customers & Pricing (CRM), Bookings & Duty Control, Own/Partner Fleet Management, Risk & Maintenance tracking, and GST Finance across multi-tenant workspaces.",
+      "Exception-Driven Command Center: Built a rule-based dashboard that surfaces real-time operational bottlenecks across Sales, Operations, and Accounts (e.g., unallocated duties, viewed estimates >24h, missing GST invoices).",
+      "Zero-App Driver Portal & Payment Automation: Integrated view-tracked public estimate links, Razorpay webhook auto-booking conversion, mobile driver duty portals (odometer/toll capture), and single-use dynamic UPI QR collections.",
+      "Granular RBAC & Multi-Entity Governance: Enforced authority-based UI/action filtering, departmental data isolation, and automated CGST/SGST/IGST PDF invoicing with attached trip proofs."
     ],
     architectureOverview:
       "Customers browse fleet and generate estimate links. On payment, Razorpay webhooks trigger asynchronous booking conversion inside Express.js. The POST /v1/client/bookings endpoint validates idempotency keys, writes to PostgreSQL/MySQL, and emits events for driver duty assignment. Invoices are generated as PDFs with correct GST tax splits.",
@@ -517,10 +518,9 @@ export const EXPERIENCE_ITEMS = [
     location: "India",
     highlights: [
       "Engineered high-throughput telematics ingestion and insurance underwriting calculation algorithms for commercial fleets.",
-      "Led the transition of time-series geospatial tracking points from MongoDB into PostgreSQL with PostGIS indexing.",
-      "Built real-time vehicle dispatch and telemetry streaming systems with Redis Pub/Sub and WebSockets.",
+      "Led the transition of time-series geospatial tracking points from MongoDB into PostgreSQL with PostGIS indexing."
     ],
-    technologies: ["Node.js", "PostgreSQL", "MongoDB", "Redis Pub/Sub", "WebSockets", "Docker"],
+    technologies: ["Node.js", "PostgreSQL", "MongoDB", "Docker"],
   },
   {
     company: "Qurilo Solutions",
