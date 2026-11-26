@@ -72,7 +72,7 @@ export default function RecruiterExecutiveCard({ onClose }: RecruiterExecutiveCa
               Notice:{" "}
               <span className="text-emerald-400 font-semibold">{CANDIDATE_INFO.noticePeriod}</span>
               {" · "}
-              Target: <span className="text-sky-300">Full-Stack & Backend (5+ LPA)</span>
+              Target: <span className="text-sky-300">Full-Stack & Backend (5.5+ LPA)</span>
             </p>
           </div>
 
