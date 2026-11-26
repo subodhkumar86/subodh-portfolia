@@ -477,16 +477,6 @@ export const ALL_PROJECTS: PortfolioProject[] = [
       "Full-stack enterprise HRMS and workforce operations platform built for Umbrella Room Ventures (URV). Features a multi-panel architecture (Employee, HR, and Admin views) with daily check-in/check-out attendance tracking, automated leave entitlement rules (monthly CL, bi-annual SL resets, carry-forward EL), payroll & salary processing, employee task assignment, document management, and company-wide notices/birthday alerts.",
   },
   {
-    id: 'eccomerce-website',
-    title: 'E-Commerce Website',
-    category: 'E-Commerce & EdTech',
-    badge: 'Retail Storefront',
-    stack: ['Next.js', 'React', 'Tailwind CSS'],
-    liveUrl: 'https://eccomerce-website-subodhkumar86.netlify.app/',
-    githubUrl: 'https://github.com/subodhkumar86/eccomerce-website',
-    description: 'Modern e-commerce storefront with product catalogs, cart management, and checkout flows.',
-  },
-  {
     id: 'investinpro-noida',
     title: 'InvestInPro Noida',
     category: 'E-Commerce & EdTech',
