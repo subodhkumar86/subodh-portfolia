@@ -59,7 +59,7 @@ export const CANDIDATE_INFO = {
   roleString:
     "Full Stack Developer | Node.js, React.js, Next.js, PHP/Laravel, PostgreSQL/MySQL",
   subHeadline:
-    "Full Stack Developer architecting Government Portals, Multi-Tenant SaaS & Distributed Backends.",
+    "Full-Stack Engineer crafting production SaaS, enterprise ERPs & resilient APIs.",
   statusBadge:
     "2.5+ Yrs Full-Stack & Backend Engineer | Greater Noida / Delhi NCR | Immediate / Short Notice",
   bio:
@@ -84,9 +84,9 @@ export const CANDIDATE_INFO = {
   ],
   topHighlights: [
     "GMDA TDR Portal: Government of Assam state regulatory ledger system",
-    "Fleetovo: Commercial car rental SaaS with Razorpay webhooks & GST invoices",
+    "Fleetovo: End-to-End Commercial Car Rental & Fleet Operations OS (ERP + CRM)",
     "BusinessOS: Multi-tenant ERP with PostgreSQL Row-Level Security (RLS)",
-    "DronaAIm: Real-time telematics backend & MongoDB-to-PostgreSQL migration",
+    "DronaAIm: Backend-only Node.js/Express.js telematics APIs & MongoDB-to-PostgreSQL migration",
   ],
 };
 export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
@@ -191,8 +191,8 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     ],
     keyModules: [
       {
-        title: "12-Step Rental Suite",
-        desc: "Complete flow from vehicle selection to delivery confirmation.",
+        title: "7-Module Operations OS",
+        desc: "Unified CRM, rate cards, live duty dispatch, fleet maintenance, risk compliance & GST accounting.",
       },
       {
         title: "Razorpay Webhook Conversion",
@@ -264,55 +264,55 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
   {
     id: "dronaaim",
     title: "DronaAIm",
-    subtitle: "Fleet Telematics & Insurance Underwriting Backend",
+    subtitle: "Backend-Only Fleet Telematics & Workflow API Platform",
     category: "Enterprise & Gov",
-    badge: "Backend & Migration",
-    stack: ["Node.js", "PostgreSQL", "MongoDB", "Redis Pub/Sub", "WebSockets", "Docker"],
-    liveUrl: "https://www.app.dronaaim.ai",
+    badge: "Backend & DB Migration",
+    stack: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "REST APIs", "RBAC"],
+    liveUrl: "https://www.app.dronaaim.ai/",
     description:
-      "Real-time GPS fleet tracking, driver scoring, JWT/RBAC underwriting APIs, low-latency WebSockets + Redis pub/sub telemetry, and MongoDB-to-PostgreSQL schema & SQL index migration. Strictly Backend role — no frontend ownership.",
+      "Worked specifically on the backend using Node.js and Express.js—building role-based REST APIs across multiple modules, handling driving/telematics events, alerts/logs, and system workflows, and leading the database migration from MongoDB to PostgreSQL. Strictly backend ownership (no frontend).",
     highlights: [
-      "Real-time GPS telemetry ingestion via WebSockets & Redis Pub/Sub",
-      "Driver scoring & insurance underwriting calculation algorithms",
-      "JWT/RBAC-secured underwriting APIs for commercial fleets",
-      "Zero-downtime MongoDB-to-PostgreSQL schema & SQL index migration",
+      "Role-Based REST APIs & Multi-Module Backend: Built modular REST endpoints in Node.js and Express.js with role-scoped access across multiple operational modules.",
+      "Driving & Telematics Event Workflows: Handled driving/telematics event ingestion, alerts/logs generation, and system state/workflow APIs.",
+      "MongoDB to PostgreSQL Migration: Modeled relational schemas and migrated backend data from MongoDB to PostgreSQL with optimized SQL indexing.",
+      "Backend-Only Engineering Scope: Owned server-side API architecture, business logic, and database reliability without frontend involvement.",
     ],
     architectureOverview:
-      "GPS tracking devices push telemetry over WebSockets into a Node.js ingestion layer. Redis Pub/Sub fans out events to scoring workers that compute driver risk scores and persist them to PostgreSQL. Historical telemetry was migrated from MongoDB to PostgreSQL with geospatial indexing, using SQL indexes to serve underwriting queries at scale.",
+      "Client applications and telematics devices communicate with a modular Node.js and Express.js REST API layer. Role-based middleware enforces module-level permissions, while event and workflow handlers process driving/telematics events, alerts, and logs. Core operational and telemetry data was migrated from MongoDB to PostgreSQL for relational integrity and faster indexed queries.",
     architectureNodes: [
       {
-        title: "GPS Telemetry Ingestion",
-        role: "Real-time vehicle location streaming via WebSockets",
-        tech: "Node.js, WebSockets",
+        title: "Role-Based API Gateway",
+        role: "JWT/RBAC middleware routing requests across backend modules",
+        tech: "Node.js, Express.js",
       },
       {
-        title: "Event Bus",
-        role: "Fan-out telemetry events to scoring & underwriting workers",
-        tech: "Redis Pub/Sub",
+        title: "Telematics & Event Handler",
+        role: "Driving event processing, alerts & audit log APIs",
+        tech: "Node.js, Express.js",
       },
       {
-        title: "Driver Scoring Engine",
-        role: "Risk score computation & underwriting eligibility",
-        tech: "Node.js",
+        title: "Workflow & State Engine",
+        role: "Multi-module business workflows & status transitions",
+        tech: "Node.js, Express.js",
       },
       {
-        title: "Telemetry Warehouse",
-        role: "Migrated from MongoDB to PostgreSQL with geospatial SQL indexes",
+        title: "Relational Data Layer",
+        role: "Backend data modeling & migration from MongoDB to PostgreSQL",
         tech: "PostgreSQL, MongoDB",
       },
     ],
     keyModules: [
       {
-        title: "Real-Time GPS Tracking",
-        desc: "Low-latency vehicle position streaming with WebSockets.",
+        title: "Multi-Module REST APIs",
+        desc: "Role-based Node.js & Express.js endpoints across core backend modules.",
       },
       {
-        title: "Driver Scoring & Underwriting",
-        desc: "Risk algorithms powering insurance underwriting decisions.",
+        title: "Driving Events & Alerts",
+        desc: "Telematics event handling, alert triggers, logs, and workflow APIs.",
       },
       {
         title: "MongoDB → PostgreSQL Migration",
-        desc: "Schema redesign and SQL index migration for time-series telemetry.",
+        desc: "Relational data modeling and database transition to PostgreSQL.",
       },
     ],
   },
@@ -466,14 +466,15 @@ export const ALL_PROJECTS: PortfolioProject[] = [
     description:
       "Production REST API backend services for Via Farm alongside multi-role matrimonial web portals with search/matching workflows.",
   },
-    {
-    id: 'urv-staff',
-    title: 'URV Staff Management System',
-    category: 'Enterprise & Gov',
-    badge: 'Staff Management',
-    stack: ['React.js', 'Next.js', 'Node.js', 'PHP/Laravel', 'PostgreSQL'],
-    liveUrl: 'http://staff.urv.ltd/',
-    description: 'University staff management platform for employee directories, leave management, payroll processing, and internal communications.',
+  {
+    id: "urv-staff",
+    title: "URV Staff Management System",
+    category: "Enterprise & Gov",
+    badge: "Enterprise HRMS & Workforce Portal",
+    stack: ["Next.js", "React.js", "Node.js", "MySQL", "RBAC"],
+    liveUrl: "https://staff.urv.ltd",
+    description:
+      "Full-stack enterprise HRMS and workforce operations platform built for Umbrella Room Ventures (URV). Features a multi-panel architecture (Employee, HR, and Admin views) with daily check-in/check-out attendance tracking, automated leave entitlement rules (monthly CL, bi-annual SL resets, carry-forward EL), payroll & salary processing, employee task assignment, document management, and company-wide notices/birthday alerts.",
   },
   {
     id: 'eccomerce-website',
@@ -760,11 +761,11 @@ COMMIT;`,
 
   {
     id: "dronaaim-migration",
-    title: "DronaAIm Telemetry Pipeline",
-    subtitle: "MongoDB → PostgreSQL Migration & WebSocket Flow",
+    title: "DronaAIm Backend & DB Migration",
+    subtitle: "Role-Based REST APIs & MongoDB → PostgreSQL Flow",
     category: "Enterprise & Gov",
-    requestLabel: "Telemetry Ingest (WebSocket Message)",
-    responseLabel: "Scoring & Persistence Result",
+    requestLabel: "Request (POST /v1/telematics/events)",
+    responseLabel: "Response (201 Created — PostgreSQL)",
     request: `{
   "device_id": "gps_unit_4482",
   "fleet_id": "fleet_commercial_01",
@@ -776,8 +777,6 @@ COMMIT;`,
   },
   "telemetry": {
     "speed_kmh": 64.5,
-    "engine_load_pct": 72,
-    "fuel_level_pct": 58,
     "hard_braking": false,
     "idle_seconds": 0
   },
@@ -785,41 +784,37 @@ COMMIT;`,
 }`,
     response: `{
   "event_id": "tel_4482_20260214t143210",
-  "driver_score": 87,
-  "risk_tier": "low",
-  "persisted_to": "postgres.telemetry_timeseries",
-  "index_used": "idx_telemetry_fleet_ts",
-  "postgis_queryable": true,
-  "broadcast_channels": [
-    "fleet:commercial_01",
-    "driver:9x2m4p8"
-  ],
-  "underwriting_eligible": true
+  "alert_triggered": false,
+  "workflow_state": "logged",
+  "persisted_to": "postgres.telematics_events",
+  "index_used": "idx_telematics_fleet_ts",
+  "role_scope": "fleet_manager",
+  "audit_logged": true
 }`,
     flowNodes: [
       {
-        title: "GPS Telemetry Ingestion",
-        role: "Real-time vehicle location streaming via WebSockets",
-        tech: "Node.js, WebSockets",
+        title: "RBAC Auth Middleware",
+        role: "Validates user role & scopes module REST API access",
+        tech: "Node.js, Express.js",
       },
       {
-        title: "Event Bus",
-        role: "Fan-out telemetry events to scoring & underwriting workers",
-        tech: "Redis Pub/Sub",
+        title: "Driving Event Controller",
+        role: "Validates & processes incoming driving/telematics events",
+        tech: "Node.js, Express.js",
       },
       {
-        title: "Driver Scoring Engine",
-        role: "Risk score computation & underwriting eligibility",
-        tech: "Node.js",
+        title: "Alerts & Workflow Service",
+        role: "Generates alerts, audit logs & updates system state",
+        tech: "Node.js, Express.js",
       },
       {
-        title: "Telemetry Warehouse",
-        role: "Migrated from MongoDB to PostgreSQL with geospatial SQL indexes",
+        title: "PostgreSQL Data Layer",
+        role: "Relational storage migrated from MongoDB with SQL indexes",
         tech: "PostgreSQL, MongoDB",
       },
     ],
     flowOverview:
-      "GPS devices stream telemetry over WebSockets into Node.js. Redis Pub/Sub fans events to scoring workers that compute driver risk scores. Historical data was migrated from MongoDB to PostgreSQL with geospatial indexes, enabling fast underwriting queries.",
+      "Role-scoped REST requests hit Express.js middleware, which validates permissions and routes driving/telematics events to the event and workflow handlers. Alerts, logs, and state transitions are persisted to PostgreSQL after migrating the backend schema from MongoDB.",
   },
   {
     id: "saga-order-rollback",
